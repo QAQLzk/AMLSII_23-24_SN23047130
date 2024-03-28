@@ -1,5 +1,5 @@
 from functions import *
-
+from tensorflow.keras.models import load_model
 
 WORK_DIR = 'datasets/cassava-leaf-disease-classification/'
 # ======================================================================================================================
@@ -30,6 +30,11 @@ trained_model_512, best_train_acc_512, best_val_acc_300 =  model_training_plot(
     model= model_512, train_generator= data_train_512, validation_generator= data_val_512,
     EPOCHS=8, BATCH_SIZE=BATCH_SIZE, STEPS_PER_EPOCH=STEPS_PER_EPOCH, VALIDATION_STEPS=VALIDATION_STEPS, input_shape=512
 )
+
+## If dont wanna train the model, please uncomment following code,
+# Load the pre-trained model
+# trained_model_300= load_model('Cassava_model_300.h5')
+# trained_model_512 = load_model('Cassava_model_512.h5')
 
 # test and evaluate the 512 model
 test_acc_512 = test_evaluation(trained_model_512, data_test_512)
