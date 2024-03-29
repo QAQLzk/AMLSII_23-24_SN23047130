@@ -37,7 +37,7 @@ The works base on Python 3.11.6. The following are the libraries needed:
 6. Alternatively, detailed training processes and outputs can be viewed in the `model_300.ipynb` and `model_512.ipynb` notebooks.(recommand!!)
 
    
-note:
+###note:
 - By commenting out the training portion in main.py, as well as un-commenting the code that loads the model, you can start the test set evaluation directly
 - Retraining may lead to subtle differences in results.
 - If you need to re-run jupyter notebook, create folders for TS_300 and TS_512 in the results folder.
