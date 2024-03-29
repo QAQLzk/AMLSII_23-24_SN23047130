@@ -37,6 +37,9 @@ trained_model_512, best_train_acc_512, best_val_acc_512 =  model_training_plot(
 # trained_model_300= load_model('Cassava_model_300.h5')
 # trained_model_512 = load_model('Cassava_model_512.h5')
 
+# test and evaluate the 300 model
+# test_acc_300 = test_evaluation(trained_model_300, data_test_300)
+
 # test and evaluate the 512 model
 test_acc_512 = test_evaluation(trained_model_512, data_test_512)
 
