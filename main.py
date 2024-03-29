@@ -26,13 +26,14 @@ trained_model_300, best_train_acc_300, best_val_acc_300 =  model_training_plot(
 
 # Training of Input shape 512
 
-trained_model_512, best_train_acc_512, best_val_acc_300 =  model_training_plot(
+trained_model_512, best_train_acc_512, best_val_acc_512 =  model_training_plot(
     model= model_512, train_generator= data_train_512, validation_generator= data_val_512,
     EPOCHS=8, BATCH_SIZE=BATCH_SIZE, STEPS_PER_EPOCH=STEPS_PER_EPOCH, VALIDATION_STEPS=VALIDATION_STEPS, input_shape=512
 )
 
 ## If dont wanna train the model, please uncomment following code,
 # Load the pre-trained model
+
 # trained_model_300= load_model('Cassava_model_300.h5')
 # trained_model_512 = load_model('Cassava_model_512.h5')
 
@@ -43,8 +44,8 @@ test_acc_512 = test_evaluation(trained_model_512, data_test_512)
 
 # ======================================================================================================================
 ## Print out your results with following format:
-# print('TA:{},{};TB:{},{};'.format(acc_A_train, acc_A_test,
-#                                                         acc_B_train, acc_B_test))
+print('model_300: train:{},val:{};   model_512: train:{}, val:{}, test:{};'.format(best_train_acc_300, best_val_acc_300,
+                                                        best_train_acc_512, best_val_acc_512,test_acc_512))
 
 # If you are not able to finish a task, fill the corresponding variable with 'TBD'. For example:
 # acc_A_train = 'TBD'

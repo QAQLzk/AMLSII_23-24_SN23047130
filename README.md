@@ -41,6 +41,7 @@ The works base on Python 3.11.6. The following are the libraries needed:
 - By commenting out the training portion in main.py, as well as un-commenting the code that loads the model, you can start the test set evaluation directly
 - Retraining may lead to subtle differences in results.
 - If you need to re-run jupyter notebook, create folders for TS_300 and TS_512 in the results folder.
+- Because the performance was only compared via the validation set, and thus the model with input size 300 was not evaluated using the test set. If needed, this can be evaluated by uncommenting the code and thus the evaluation.
 
 
 
